@@ -1,0 +1,17 @@
+/* .App {
+  text-align: center;
+}
+.form{
+  display: inline-block;
+  justify-content: center;
+}
+.form input{
+  width: 250px;
+  margin: 10px;
+} */
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  background-color: white;
+}

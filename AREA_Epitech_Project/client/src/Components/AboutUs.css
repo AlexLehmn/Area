@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
+
+.AboutUs {
+    padding-top: 100px;
+    height: 80vh;
+    width: 100%;
+    display: block;
+    text-align: center;
+}
+
+#title {
+
+}
+
+.all_boxe {
+    justify-content: space-between;
+    display: flex;
+    margin-right: 50px;
+    margin-left: 50px;
+    margin-top: 100px;
+    height: 340px;
+    width: auto;
+}
+
+.all_boxe h1 {
+    padding-top: 290px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.AboutUs h2 {
+    padding-top: 100px;
+}
+
+.boxe {
+    width: 270px;
+    height: 270px;
+}
+
+#Alex {
+    color: blue;
+    border: solid 10px blue;
+    background-image: url("../Assets/alexlebg.jpg");
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+
+#Thomas {
+    color: red;
+    border: solid 10px red;
+    background-image: url("../Assets/Thomasbg.jpg");
+    background-size: cover;
+    background-position: bottom;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+
+#Enguerrand {
+    color: pink;
+
+    border: solid 10px pink;
+    background-image: url("../Assets/enguerrandbg.jpg");
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+
+#Maxime {
+    color: green;
+    border: solid 10px green;
+    background-image: url("../Assets/maximebg.jpg");
+    background-size: cover;
+    background-position: right;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}

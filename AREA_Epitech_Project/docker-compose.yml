@@ -1,0 +1,65 @@
+version: '3'
+
+services:
+  db:
+    container_name: area-db
+    image: mysql:5.7
+    restart: always
+    cap_add:
+      - SYS_NICE
+    volumes:
+      - "./setup.sql:/docker-entrypoint-initdb.d/setup.sql"
+    ports:
+      - "3306:3306"
+    environment:
+      - MYSQL_DATABASE=areadb
+      - MYSQL_ROOT_PASSWORD=password
+      - MYSQL_HOST=localhost
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-uroot", "-ppass"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  api:
+    container_name: area-api
+    build: ./server
+    depends_on:
+      db:
+        condition: service_healthy
+    volumes:
+      - /app/node_modules
+      - ./server:/app
+    environment:
+      - MYSQL_HOST=db
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=password
+      - MYSQL_DATABASE=areadb
+    ports:
+      - "8080:8080"
+
+  client_web:
+    depends_on:
+      - api
+    container_name: area-client_web
+    stdin_open: true
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+    build: ./client
+    volumes:
+      - /app/node_modules
+      - ./client:/app
+    ports:
+      - "8081:8081"
+
+  adminer:
+    depends_on:
+      db:
+        condition: service_healthy
+    container_name: area-adminer
+    image: adminer:latest
+    restart: unless-stopped
+    ports:
+      - "8082:8080"
+    environment:
+      ADMINER_DEFAULT_SERVER: db

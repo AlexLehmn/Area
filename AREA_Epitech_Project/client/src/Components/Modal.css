@@ -1,0 +1,163 @@
+.modalBackground {
+    width: 100%;
+    height: 200vh;
+    background-color: rgba(55, 55, 55, 0.902);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+}
+
+.modalContainer {
+    width: 1200px;
+    height: 800px;
+    border-radius: 12px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    margin-top: 75px;
+}
+
+.modalContainer .title {
+    display: flex;
+    margin-top: 10px;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-bottom: 60px;
+}
+
+.titleCloseBtn {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.titleCloseBtn button {
+    background-color: transparent;
+    border: none;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.modalContainer .body {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 1.7rem;
+    text-align: center;
+    padding-bottom: 60px;
+}
+
+.modalContainer .footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modalContainer .titleCloseBtn button {
+    width: 150px;
+    height: 45px;
+    margin: 10px;
+    border: none;
+    background-color: cornflowerblue;
+    color: white;
+    border-radius: 8px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.modalContainer select {
+    width: 350px;
+    height: 50px;
+    border-radius: 5px;
+    background: linear-gradient(90deg, rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1) 100%);
+    box-shadow: 0 1px 20px rgba(34, 192, 195, 0.51);
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
+}
+
+#real_title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 60px;
+}
+
+.modalContainer h1 {
+    font-family: 'Lato', sans-serif;
+    font-size: 35px;
+}
+
+.modalContainer .footer button {
+    width: 150px;
+    height: 45px;
+    margin: 10px;
+    border: none;
+    background-color: rgb(26, 164, 38);
+    color: white;
+    border-radius: 8px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#cancelBtn {
+    background-color: crimson;
+}
+
+#realtitle {
+    padding-bottom: 50px;
+}
+
+.Reddit {
+    display: flex;
+}
+
+.Reddit h4 {
+    padding-right: 20px;
+}
+
+.Twitter {
+    display: flex;
+}
+
+.Twitter h4 {
+    padding-right: 20px;
+}
+
+.Github {
+    display: flex;
+}
+
+.Github h4 {
+    padding-right: 20px;
+}
+
+h4 {
+    font-family: 'Lato', sans-serif;
+    color: red;
+}
+
+#github_1 {
+    padding-right: 30px;
+    align-items: center;
+    justify-content: center ;
+}
+
+.Discord {
+    display: flex;
+}
+
+.Discord h4 {
+    padding-right: 20px;
+}
+
+.Mail {
+    display: flex;
+}
+
+.Mail h4 {
+    padding-right: 20px;
+}
+
+.logo_action {
+    width: 60px;
+    height: auto;
+}

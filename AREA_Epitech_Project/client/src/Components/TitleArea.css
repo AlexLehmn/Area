@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap');
+
+
+.TitleArea {
+    margin-top: 20px;
+    display: flex-end;
+    font-family: 'Oswald', sans-serif;
+    font-weight: lighter;
+    padding-left: 200px;
+}
+
+.TitleArea h1 {
+    text-align:left;
+    font-size: 100px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.TitleArea p {
+    padding-left: 150px;
+    font-size: 30px;
+    font-weight: lighter;
+}

@@ -1,0 +1,113 @@
+import React from "react";
+import { StyleSheet, Text, View, Image, TextInput, TouchableOpacity, ScrollView} from 'react-native';
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+
+
+function LoginScreen({navigation}) {
+  const [email, onChangeEmail] = React.useState(null);
+  const [password, onChangePassword] = React.useState(null);
+
+  return (
+    <ScrollView contentContainerStyle={styles.container}>
+      <Text style={styles.welcomeText}>Bienvenue</Text>
+      <TextInput style={styles.input} onChangeText={onChangeEmail} placeholder="Adresse e-mail" />
+      <TextInput style={styles.input} onChangeText={onChangePassword} secureTextEntry= {true} placeholder="Mot de passe"/>
+
+      <TouchableOpacity style={styles.passwordButton}>
+        <Text style={styles.passwordButtontext}>Connexion</Text>
+      </TouchableOpacity>
+      <TouchableOpacity onPress={() => navigation.navigate('Signup')}>
+        <Text style={styles.forgotPasswordtext}>Pas de compte ? Créez-en un ici  </Text>
+      </TouchableOpacity>
+    </ScrollView>
+  );
+}
+
+function SignupScreen({navigation}) {
+  const [username, onChangeUsername] = React.useState("");
+  const [email, onChangeEmail] = React.useState("");
+  const [password, onChangePassword] = React.useState("");
+  const [confirmPassword, onChangeConfirmPassword] = React.useState("");
+  
+
+  return (
+    <ScrollView contentContainerStyle={styles.container}>
+      <Text style={styles.welcomeText}>S'enregistrer</Text>
+      <TextInput style={styles.input} onChangeText={onChangeUsername} placeholder="Identifiant" />
+      <TextInput style={styles.input} onChangeText={onChangeEmail} placeholder="Adresse e-mail" />
+      <TextInput style={styles.input} onChangeText={onChangePassword} secureTextEntry= {true} placeholder="Mot de passe" />
+      <TextInput style={styles.input} onChangeText={onChangeConfirmPassword} secureTextEntry= {true} placeholder="Confirmer mot de passe"/>
+
+      <TouchableOpacity style={styles.passwordButton}>
+        <Text style={styles.passwordButtontext}>Valider</Text>
+      </TouchableOpacity>
+      <TouchableOpacity onPress={() => navigation.navigate("Login")}>
+        <Text style={styles.forgotPasswordtext}>Déjà un compte ? Connectez-vous  </Text>
+      </TouchableOpacity>
+    </ScrollView>
+  );
+}
+
+const Stack = createNativeStackNavigator();
+
+export default function App() {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="Login">
+        <Stack.Screen name="Login" component={LoginScreen} options={{headerShown: false}} />
+        <Stack.Screen name="Signup" component={SignupScreen} options={{headerShown: false}}/>
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: 'white',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+
+  input: {
+    height: 40,
+    width: 250,
+    margin: 10,
+    borderBottomWidth: 1,
+    padding: 10,
+    borderRadius: 5
+  },
+
+  passwordButton: {
+    height: 50,
+    width: 200,
+    backgroundColor: '#47FF63',
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderRadius: 30,
+    marginTop: 20,
+    marginBottom: 10
+  },
+
+  forgotPasswordArea:{
+    height: 40,
+    width: 250,
+    
+  },
+
+  forgotPasswordtext:{
+    color: '#777',
+    paddingLeft: 10
+  },
+
+  passwordButtontext: {
+    fontSize: 20,
+    fontWeight: 'bold',
+  },
+  
+  welcomeText: {
+    fontSize: 40,
+    fontWeight: 'bold'
+  }
+});

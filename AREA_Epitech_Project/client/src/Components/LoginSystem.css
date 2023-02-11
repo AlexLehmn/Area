@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
+
+
+.App {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: rgb(34, 193, 195);
+    background: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1) 100%);
+}
+
+.login {
+    max-width: 500px;
+    display: flex;
+    gap: 1em;
+    border: 1px solid #e9ecef;
+    background-color: white;
+    flex-direction: column;
+    border-radius: 5px;
+}
+
+.login h1 {
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 1px;
+    font-weight: bold;
+    padding-top: 10px;
+}
+
+.login input {
+    margin: auto;
+    padding: 0.2em;
+    height: 50px;
+    box-sizing: border-box;
+    padding-left: 1.5rem;
+}
+
+.login label {
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 1px;
+    font-weight: lighter;
+    padding: 0;
+    margin: 0;
+}
+
+.login span {
+    color: #adb5bd;
+}
+
+.App button {
+    background-color: rgb(11, 235, 183);
+    font-family: 'Oswald', sans-serif;
+    color: #e9ecef;
+    cursor: pointer;
+    margin: auto;
+    padding: 1em 0;
+    border-radius: 5px;
+    width: 50vw;
+    font-weight: bold;
+    transition: ease-in-out 0.4s;
+}
+
+.App button:hover {
+    background: rgba(11, 235, 183, 0.495);
+}
+
+.wrapper {
+    position: relative;
+    padding-left: 20px;
+}
+
+.icon_1 {
+    height: 1.5rem;
+    width: 1.5rem;
+    background-image: url("../Assets/icon.png");
+    background-size: cover;
+    padding: 4px;
+    position: absolute;
+    box-sizing: border-box;
+    top: 50%;
+    left: 80px;
+    transform: translateY(-50%);
+}
+
+.icon_2 {
+    height: 1.5rem;
+    width: 1.5rem;
+    background-image: url("../Assets/iconcade.png.png");
+    background-size: cover;
+    padding: 4px;
+    position: absolute;
+    box-sizing: border-box;
+    top: 50%;
+    left: 80px;
+    transform: translateY(-50%);
+}
+
+.icon_3 {
+    height: 1.5rem;
+    width: 1.5rem;
+    background-image: url("../Assets/mail.png");
+    background-size: cover;
+    padding: 4px;
+    position: absolute;
+    box-sizing: border-box;
+    top: 50%;
+    left: 80px;
+    transform: translateY(-50%);
+}
