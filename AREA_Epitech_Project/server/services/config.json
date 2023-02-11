@@ -1,11 +1,11 @@
 {
-    "discord_token": "MTAyODMyMDg2NTAwOTUzMjk2OQ.GFxaB4.lrguPz6nUnF93ObmoFDUo0xGpsmJMYIX82ew8E",
-    "discord_client_id": "1028320865009532969",
-    "github_token": "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",
-    "twitter_consumer_key": "jqCMXq9LWgjTaRsANWWPIynOk",
-    "twitter_consumer_secret": "OZkWkKSF1GE0RGSC69p68UA1Utqvp9qfSSbUUB3ZX43p1YXhCg",
-    "twitter_bearer_token": "AAAAAAAAAAAAAAAAAAAAAAIliwEAAAAAZf%2FK0ar7rEKU1PeiCcun9aELe8w%3DtYv07ZnMDk9PWUgnrWv16Q4YMkoOdQv623lEI4QLE4rU55rIfI",
-    "twitter_access_token": "1567906254751780864-gDuM912VqsL7B5lnYdMnEN87AetHpf",
-    "twitter_access_secret": "PbkpoLwqtnJKjiKDEK1tq8XS8OKmsoQWNOwcU9wtXIBBQ",
-    "botmail_password": "ATdxx9Yj3Y3x1t43W8"
+    "discord_token": "",
+    "discord_client_id": "",
+    "github_token": "",
+    "twitter_consumer_key": "",
+    "twitter_consumer_secret": "",
+    "twitter_bearer_token": "",
+    "twitter_access_token": "",
+    "twitter_access_secret": "",
+    "botmail_password": ""
 }
